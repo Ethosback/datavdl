@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -30,11 +31,12 @@ jobs:
       - name: Run VDL monitor
         env:
           KEYBERT_MODEL: ${{ vars.KEYBERT_MODEL || 'all-MiniLM-L6-v2' }}
-          SITEMAP_TIMEOUT: ${{ vars.SITEMAP_TIMEOUT || '30' }}
+          SITEMAP_TIMEOUT: ${{ vars.SITEMAP_TIMEOUT || '12' }}
           PAGE_TIMEOUT: ${{ vars.PAGE_TIMEOUT || '20' }}
           HTTP_RETRIES: ${{ vars.HTTP_RETRIES || '3' }}
-          PAGE_WORKERS: ${{ vars.PAGE_WORKERS || '16' }}
-        run: python scripts/monitor_vdl.py
+          SITEMAP_WORKERS: ${{ vars.SITEMAP_WORKERS || '32' }}
+          PAGE_WORKERS: ${{ vars.PAGE_WORKERS || '24' }}
+        run: python -u scripts/monitor_vdl.py
 
       - name: Build dashboard data
         run: python scripts/build_dashboard_data.py
