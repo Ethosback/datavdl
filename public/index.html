@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analyse VDL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Analyse vendeurs de liens</p>
+          <h1>Sortants éditoriaux détectés sur les nouvelles publications</h1>
+          <p class="lede">
+            Dashboard statique basé sur les sitemaps, les nouvelles URLs et les liens sortants
+            trouvés dans le contenu principal.
+          </p>
+        </div>
+        <div class="meta-card" id="build-meta">
+          <strong>Chargement...</strong>
+        </div>
+      </header>
+
+      <section class="cards" id="summary-cards"></section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Top vendeurs</h2>
+          <p>Sites qui font le plus de liens sortants dans leurs nouveaux contenus.</p>
+        </div>
+        <div id="sellers-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Top acheteurs / domaines receveurs</h2>
+          <p>Domaines qui reçoivent le plus de liens depuis les nouveaux contenus suivis.</p>
+        </div>
+        <div id="buyers-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Liens récents</h2>
+          <p>Derniers liens sortants détectés.</p>
+        </div>
+        <div id="links-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Réseau vendeur → cible</h2>
+          <p>Arêtes agrégées entre domaines sources et domaines cibles.</p>
+        </div>
+        <div id="edges-grid"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
