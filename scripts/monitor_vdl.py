@@ -42,10 +42,12 @@ EXPECTED_HEADERS = [
 ]
 
 USER_AGENT = "Mozilla/5.0 (compatible; AnalyseVDL/1.0; +https://github.com/)"
-SITEMAP_TIMEOUT = int(os.getenv("SITEMAP_TIMEOUT", "12"))
+SITEMAP_TIMEOUT = int(os.getenv("SITEMAP_TIMEOUT", "25"))
 PAGE_TIMEOUT = int(os.getenv("PAGE_TIMEOUT", "20"))
 HTTP_RETRIES = int(os.getenv("HTTP_RETRIES", "3"))
-SITEMAP_WORKERS = int(os.getenv("SITEMAP_WORKERS", "32"))
+SITEMAP_WORKERS = int(os.getenv("SITEMAP_WORKERS", "12"))
+SECOND_PASS_SITEMAP_TIMEOUT = int(os.getenv("SECOND_PASS_SITEMAP_TIMEOUT", "40"))
+SECOND_PASS_SITEMAP_WORKERS = int(os.getenv("SECOND_PASS_SITEMAP_WORKERS", "4"))
 PAGE_WORKERS = int(os.getenv("PAGE_WORKERS", "16"))
 PROGRESS_EVERY = int(os.getenv("PROGRESS_EVERY", "25"))
 KEYBERT_MODEL = os.getenv("KEYBERT_MODEL", "all-MiniLM-L6-v2")
@@ -376,6 +378,7 @@ def parse_sitemap(
     session: requests.Session,
     sitemap_url: str,
     visited: set[str] | None = None,
+    timeout: int | None = None,
 ) -> tuple[set[str], bool]:
     normalized_sitemap_url = normalize_url(sitemap_url)
     if not normalized_sitemap_url:
@@ -387,7 +390,7 @@ def parse_sitemap(
     visited.add(normalized_sitemap_url)
 
     try:
-        response = get_with_retries(session, normalized_sitemap_url, SITEMAP_TIMEOUT)
+        response = get_with_retries(session, normalized_sitemap_url, timeout or SITEMAP_TIMEOUT)
         raw_bytes = response.content
         final_url = response.url
     except requests.RequestException as exc:
@@ -427,7 +430,7 @@ def parse_sitemap(
                     break
             if not child_url:
                 continue
-            child_urls, child_ok = parse_sitemap(session, child_url, visited)
+            child_urls, child_ok = parse_sitemap(session, child_url, visited, timeout=timeout)
             urls.update(child_urls)
             if not child_ok:
                 all_ok = False
@@ -437,10 +440,10 @@ def parse_sitemap(
     return set(), False
 
 
-def scan_site_sitemap(site: SellerSite) -> SitemapScanResult:
+def scan_site_sitemap(site: SellerSite, timeout: int) -> SitemapScanResult:
     session = session_with_headers()
     try:
-        current_urls, crawl_complete = parse_sitemap(session, site.sitemap_url)
+        current_urls, crawl_complete = parse_sitemap(session, site.sitemap_url, timeout=timeout)
         return SitemapScanResult(
             site=site,
             current_urls=current_urls,
@@ -448,6 +451,44 @@ def scan_site_sitemap(site: SellerSite) -> SitemapScanResult:
         )
     finally:
         session.close()
+
+
+def collect_sitemap_results(
+    sites: list[SellerSite],
+    workers: int,
+    timeout: int,
+    label: str,
+) -> tuple[dict[str, SitemapScanResult], list[SellerSite]]:
+    results: dict[str, SitemapScanResult] = {}
+    retry_sites: list[SellerSite] = []
+    completed_sites = 0
+    total_sites = len(sites)
+    if not sites:
+        return results, retry_sites
+
+    log_info(
+        f"{label}: {total_sites} site(s), {max(1, workers)} worker(s), timeout {timeout}s"
+    )
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        future_to_site = {
+            executor.submit(scan_site_sitemap, site, timeout): site for site in sites
+        }
+        for future in as_completed(future_to_site):
+            site = future_to_site[future]
+            try:
+                result = future.result()
+                results[site.domain] = result
+                if not result.crawl_complete:
+                    retry_sites.append(site)
+            except Exception as exc:
+                log_warn(f"échec inattendu sur le sitemap de {site.domain} ({exc})")
+                retry_sites.append(site)
+
+            completed_sites += 1
+            if completed_sites % PROGRESS_EVERY == 0 or completed_sites == total_sites:
+                log_info(f"{label}: {completed_sites}/{total_sites}")
+
+    return results, retry_sites
 
 
 def focus_title(title: str) -> str:
@@ -599,59 +640,62 @@ def process() -> int:
 
     pending_urls: list[tuple[SellerSite, str]] = []
     total_sites = len(sellers)
-    completed_sites = 0
-    log_info(
-        f"Traitement des sitemaps avec {max(1, SITEMAP_WORKERS)} worker(s) "
-        f"et timeout {SITEMAP_TIMEOUT}s"
+    first_pass_results, retry_sites = collect_sitemap_results(
+        sellers,
+        SITEMAP_WORKERS,
+        SITEMAP_TIMEOUT,
+        "Passage sitemap 1",
     )
-    with ThreadPoolExecutor(max_workers=max(1, SITEMAP_WORKERS)) as executor:
-        future_to_site = {executor.submit(scan_site_sitemap, site): site for site in sellers}
-        for future in as_completed(future_to_site):
-            site = future_to_site[future]
-            try:
-                result = future.result()
-            except Exception as exc:
-                log_warn(f"échec inattendu sur le sitemap de {site.domain} ({exc})")
-                completed_sites += 1
-                if completed_sites % PROGRESS_EVERY == 0 or completed_sites == total_sites:
-                    log_info(f"Sitemaps traités: {completed_sites}/{total_sites}")
-                continue
+    final_results = dict(first_pass_results)
+    if retry_sites:
+        log_info(f"Second passage sitemap sur {len(retry_sites)}/{total_sites} site(s)")
+        second_pass_results, still_incomplete_sites = collect_sitemap_results(
+            retry_sites,
+            SECOND_PASS_SITEMAP_WORKERS,
+            SECOND_PASS_SITEMAP_TIMEOUT,
+            "Passage sitemap 2",
+        )
+        final_results.update(second_pass_results)
+        if still_incomplete_sites:
+            log_warn(
+                f"{len(still_incomplete_sites)} site(s) restent incomplets après le second passage"
+            )
 
-            current_urls = result.current_urls
-            crawl_complete = result.crawl_complete
-            if not crawl_complete:
-                log_warn(f"Crawl sitemap incomplet pour {site.domain}, snapshot conservé.")
-                completed_sites += 1
-                if completed_sites % PROGRESS_EVERY == 0 or completed_sites == total_sites:
-                    log_info(f"Sitemaps traités: {completed_sites}/{total_sites}")
-                continue
-            if not current_urls:
-                completed_sites += 1
-                if completed_sites % PROGRESS_EVERY == 0 or completed_sites == total_sites:
-                    log_info(f"Sitemaps traités: {completed_sites}/{total_sites}")
-                continue
+    for site in sellers:
+        result = final_results.get(site.domain)
+        if result is None:
+            log_warn(f"Aucun résultat sitemap exploitable pour {site.domain}, snapshot conservé.")
+            continue
 
-            snapshot_file = snapshot_path(base_dir, site)
-            ever_seen_file = ever_seen_path(base_dir, site)
-            site_is_new = not snapshot_file.exists()
-            previous_urls = load_url_set(snapshot_file)
-            ever_seen_urls = load_url_set(ever_seen_file)
+        current_urls = result.current_urls
+        crawl_complete = result.crawl_complete
+        if not crawl_complete:
+            log_warn(f"Crawl sitemap incomplet pour {site.domain}, snapshot conservé.")
+            continue
+        if not current_urls:
+            continue
 
-            save_url_set(snapshot_file, current_urls, sitemap_url=site.sitemap_url)
-            updated_ever_seen = set(ever_seen_urls)
-            updated_ever_seen.update(current_urls)
-            save_url_set(ever_seen_file, updated_ever_seen, sitemap_url=site.sitemap_url)
+        snapshot_file = snapshot_path(base_dir, site)
+        ever_seen_file = ever_seen_path(base_dir, site)
+        site_is_new = not snapshot_file.exists()
+        previous_urls = load_url_set(snapshot_file)
+        ever_seen_urls = load_url_set(ever_seen_file)
 
-            if not site_is_new:
-                new_urls = sorted(url for url in current_urls - previous_urls if url not in ever_seen_urls)
-                if new_urls:
-                    log_info(f"{site.domain}: {len(new_urls)} nouvelle(s) URL(s)")
-                    for url in new_urls:
-                        pending_urls.append((site, url))
+        save_url_set(snapshot_file, current_urls, sitemap_url=site.sitemap_url)
+        updated_ever_seen = set(ever_seen_urls)
+        updated_ever_seen.update(current_urls)
+        save_url_set(ever_seen_file, updated_ever_seen, sitemap_url=site.sitemap_url)
 
-            completed_sites += 1
-            if completed_sites % PROGRESS_EVERY == 0 or completed_sites == total_sites:
-                log_info(f"Sitemaps traités: {completed_sites}/{total_sites}")
+        if site_is_new:
+            continue
+
+        new_urls = sorted(url for url in current_urls - previous_urls if url not in ever_seen_urls)
+        if not new_urls:
+            continue
+
+        log_info(f"{site.domain}: {len(new_urls)} nouvelle(s) URL(s)")
+        for url in new_urls:
+            pending_urls.append((site, url))
 
     if not pending_urls:
         log_info("Aucune nouvelle URL à enrichir.")
