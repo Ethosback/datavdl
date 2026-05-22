@@ -41,6 +41,15 @@ EXPECTED_HEADERS = [
     "Sitemap",
 ]
 
+BLACKLIST_HEADERS = [
+    "domain",
+    "site",
+    "sitemap",
+    "reason",
+    "new_urls_count",
+    "blacklisted_on",
+]
+
 USER_AGENT = "Mozilla/5.0 (compatible; AnalyseVDL/1.0; +https://github.com/)"
 SITEMAP_TIMEOUT = int(os.getenv("SITEMAP_TIMEOUT", "25"))
 PAGE_TIMEOUT = int(os.getenv("PAGE_TIMEOUT", "20"))
@@ -51,6 +60,7 @@ SECOND_PASS_SITEMAP_WORKERS = int(os.getenv("SECOND_PASS_SITEMAP_WORKERS", "4"))
 PAGE_WORKERS = int(os.getenv("PAGE_WORKERS", "16"))
 PROGRESS_EVERY = int(os.getenv("PROGRESS_EVERY", "25"))
 KEYBERT_MODEL = os.getenv("KEYBERT_MODEL", "all-MiniLM-L6-v2")
+MAX_NEW_URLS_PER_SITE = int(os.getenv("MAX_NEW_URLS_PER_SITE", "100"))
 RETRYABLE_STATUS_CODES = {408, 425, 429, 500, 502, 503, 504}
 IGNORED_SCHEMES = {"mailto", "tel", "javascript", "data"}
 STOPWORDS = {
@@ -287,6 +297,10 @@ def catalog_path(base_dir: Path) -> Path:
     return base_dir / "data" / "catalog" / "domains-vendeurs.csv"
 
 
+def blacklist_path(base_dir: Path) -> Path:
+    return base_dir / "data" / "catalog" / "blacklisted-domains.csv"
+
+
 def snapshot_path(base_dir: Path, site: SellerSite) -> Path:
     return base_dir / "data" / "state" / "snapshots" / f"{slugify(site.domain)}.json"
 
@@ -331,10 +345,75 @@ def append_jsonl_gz(path: Path, rows: Iterable[dict]) -> None:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def load_blacklist(base_dir: Path) -> dict[str, dict[str, str]]:
+    path = blacklist_path(base_dir)
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        rows: dict[str, dict[str, str]] = {}
+        for row in reader:
+            domain = (row.get("domain") or "").strip().lower()
+            if domain:
+                rows[domain] = row
+        return rows
+
+
+def save_blacklist(base_dir: Path, rows: dict[str, dict[str, str]]) -> None:
+    path = blacklist_path(base_dir)
+    ensure_dir(path.parent)
+    with path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=BLACKLIST_HEADERS)
+        writer.writeheader()
+        for domain in sorted(rows):
+            writer.writerow(rows[domain])
+
+
+def add_to_blacklist(
+    base_dir: Path,
+    site: SellerSite,
+    reason: str,
+    new_urls_count: int = 0,
+) -> None:
+    rows = load_blacklist(base_dir)
+    rows[site.domain] = {
+        "domain": site.domain,
+        "site": site.site,
+        "sitemap": site.sitemap_url,
+        "reason": reason,
+        "new_urls_count": str(new_urls_count),
+        "blacklisted_on": date.today().isoformat(),
+    }
+    save_blacklist(base_dir, rows)
+
+
+def remove_site_from_catalog(base_dir: Path, domain: str) -> None:
+    path = catalog_path(base_dir)
+    if not path.exists():
+        return
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        fieldnames = reader.fieldnames or EXPECTED_HEADERS
+        rows = [row for row in reader if registered_domain((row.get("Site") or "").strip()) != domain]
+    with path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def prune_site_state(base_dir: Path, site: SellerSite) -> None:
+    for path in (snapshot_path(base_dir, site), ever_seen_path(base_dir, site)):
+        try:
+            path.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+
 def read_sellers(base_dir: Path) -> list[SellerSite]:
     input_path = catalog_path(base_dir)
     if not input_path.exists():
         raise FileNotFoundError(f"missing catalogue file: {input_path}")
+    blacklisted = load_blacklist(base_dir)
 
     with input_path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
@@ -351,10 +430,13 @@ def read_sellers(base_dir: Path) -> list[SellerSite]:
             sitemap_value = (row["Sitemap"] or "").strip()
             if not site_value or not sitemap_value:
                 continue
+            domain_value = registered_domain(site_value)
+            if not domain_value or domain_value in blacklisted:
+                continue
             sellers.append(
                 SellerSite(
                     site=site_value,
-                    domain=registered_domain(site_value),
+                    domain=domain_value,
                     visits=(row["Visites"] or "").strip(),
                     traffic_google=(row["Trafic Google"] or "").strip(),
                     tf=(row["TF"] or "").strip(),
@@ -691,6 +773,20 @@ def process() -> int:
 
         new_urls = sorted(url for url in current_urls - previous_urls if url not in ever_seen_urls)
         if not new_urls:
+            continue
+        if len(new_urls) > MAX_NEW_URLS_PER_SITE:
+            log_warn(
+                f"{site.domain}: {len(new_urls)} nouvelle(s) URL(s), "
+                f"blacklist automatique (seuil {MAX_NEW_URLS_PER_SITE})"
+            )
+            add_to_blacklist(
+                base_dir,
+                site,
+                reason=f"too_many_new_urls>{MAX_NEW_URLS_PER_SITE}",
+                new_urls_count=len(new_urls),
+            )
+            remove_site_from_catalog(base_dir, site.domain)
+            prune_site_state(base_dir, site)
             continue
 
         log_info(f"{site.domain}: {len(new_urls)} nouvelle(s) URL(s)")

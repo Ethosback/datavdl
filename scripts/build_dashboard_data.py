@@ -29,6 +29,15 @@ EXPECTED_HEADERS = [
     "Sitemap",
 ]
 
+BLACKLIST_HEADERS = [
+    "domain",
+    "site",
+    "sitemap",
+    "reason",
+    "new_urls_count",
+    "blacklisted_on",
+]
+
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parent.parent
@@ -40,6 +49,10 @@ def ensure_dir(path: Path) -> None:
 
 def catalog_path(base_dir: Path) -> Path:
     return base_dir / "data" / "catalog" / "domains-vendeurs.csv"
+
+
+def blacklist_path(base_dir: Path) -> Path:
+    return base_dir / "data" / "catalog" / "blacklisted-domains.csv"
 
 
 def registered_domain(value: str) -> str:
@@ -59,8 +72,22 @@ def registered_domain(value: str) -> str:
     return host.lower()
 
 
+def load_blacklist(base_dir: Path) -> set[str]:
+    path = blacklist_path(base_dir)
+    if not path.exists():
+        return set()
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        return {
+            (row.get("domain") or "").strip().lower()
+            for row in reader
+            if (row.get("domain") or "").strip()
+        }
+
+
 def load_catalog(base_dir: Path) -> dict[str, dict[str, str]]:
     path = catalog_path(base_dir)
+    blacklisted = load_blacklist(base_dir)
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         if (reader.fieldnames or []) != EXPECTED_HEADERS:
@@ -68,7 +95,7 @@ def load_catalog(base_dir: Path) -> dict[str, dict[str, str]]:
         catalog: dict[str, dict[str, str]] = {}
         for row in reader:
             domain = registered_domain((row["Site"] or "").strip())
-            if not domain:
+            if not domain or domain in blacklisted:
                 continue
             catalog[domain] = row
         return catalog
@@ -93,6 +120,7 @@ def write_json(path: Path, payload) -> None:
 def build() -> int:
     base_dir = repo_root()
     catalog = load_catalog(base_dir)
+    blacklisted = load_blacklist(base_dir)
 
     page_dir = base_dir / "data" / "events" / "pages"
     link_dir = base_dir / "data" / "events" / "links"
@@ -103,6 +131,18 @@ def build() -> int:
         page_events.extend(load_jsonl_gz(path))
     for path in sorted(link_dir.glob("*.jsonl.gz")):
         link_events.extend(load_jsonl_gz(path))
+
+    page_events = [
+        event
+        for event in page_events
+        if event.get("source_domain") not in blacklisted
+    ]
+    link_events = [
+        event
+        for event in link_events
+        if event.get("source_domain") not in blacklisted
+        and event.get("target_domain") not in blacklisted
+    ]
 
     pages_by_domain: dict[str, list[dict]] = defaultdict(list)
     links_by_source: dict[str, list[dict]] = defaultdict(list)

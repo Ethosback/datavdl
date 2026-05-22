@@ -3,7 +3,7 @@ name: VDL Monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 13 * * *"
+    - cron: "24 8 * * *"
       timezone: "Europe/Paris"
 
 permissions:
