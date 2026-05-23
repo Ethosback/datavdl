@@ -37,6 +37,24 @@ BLACKLIST_HEADERS = [
     "new_urls_count",
     "blacklisted_on",
 ]
+IGNORED_TARGET_DOMAINS = {
+    "amazon.com",
+    "example.com",
+    "facebook.com",
+    "google.com",
+    "instagram.com",
+    "linkedin.com",
+    "mag-du-web.fr",
+    "microsoft.com",
+    "openai.com",
+    "perplexity.ai",
+    "pinterest.com",
+    "twitter.com",
+    "whatsapp.com",
+    "x.com",
+    "youtube.com",
+}
+IGNORED_ANCHOR_TEXTS = {"send", "share"}
 
 
 def repo_root() -> Path:
@@ -112,6 +130,25 @@ def load_jsonl_gz(path: Path) -> list[dict]:
     return rows
 
 
+def normalized_anchor_text(value: str) -> str:
+    return " ".join((value or "").split()).strip()
+
+
+def should_keep_link_event(event: dict, blacklisted: set[str]) -> bool:
+    source_domain = event.get("source_domain")
+    target_domain = event.get("target_domain")
+    if source_domain in blacklisted or target_domain in blacklisted:
+        return False
+    if target_domain in IGNORED_TARGET_DOMAINS:
+        return False
+    anchor_text = normalized_anchor_text(event.get("anchor_text", ""))
+    if not anchor_text:
+        return False
+    if anchor_text.lower() in IGNORED_ANCHOR_TEXTS:
+        return False
+    return True
+
+
 def write_json(path: Path, payload) -> None:
     ensure_dir(path.parent)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -120,6 +157,7 @@ def write_json(path: Path, payload) -> None:
 def build() -> int:
     base_dir = repo_root()
     catalog = load_catalog(base_dir)
+    active_sellers = set(catalog)
     blacklisted = load_blacklist(base_dir)
 
     page_dir = base_dir / "data" / "events" / "pages"
@@ -135,13 +173,14 @@ def build() -> int:
     page_events = [
         event
         for event in page_events
-        if event.get("source_domain") not in blacklisted
+        if event.get("source_domain") in active_sellers
+        and event.get("source_domain") not in blacklisted
     ]
     link_events = [
         event
         for event in link_events
-        if event.get("source_domain") not in blacklisted
-        and event.get("target_domain") not in blacklisted
+        if event.get("source_domain") in active_sellers
+        and should_keep_link_event(event, blacklisted)
     ]
 
     pages_by_domain: dict[str, list[dict]] = defaultdict(list)

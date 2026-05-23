@@ -63,6 +63,25 @@ KEYBERT_MODEL = os.getenv("KEYBERT_MODEL", "all-MiniLM-L6-v2")
 MAX_NEW_URLS_PER_SITE = int(os.getenv("MAX_NEW_URLS_PER_SITE", "100"))
 RETRYABLE_STATUS_CODES = {408, 425, 429, 500, 502, 503, 504}
 IGNORED_SCHEMES = {"mailto", "tel", "javascript", "data"}
+IGNORED_TARGET_DOMAINS = {
+    "amazon.com",
+    "example.com",
+    "facebook.com",
+    "google.com",
+    "instagram.com",
+    "linkedin.com",
+    "mag-du-web.fr",
+    "microsoft.com",
+    "openai.com",
+    "perplexity.ai",
+    "pinterest.com",
+    "twitter.com",
+    "whatsapp.com",
+    "x.com",
+    "youtube.com",
+}
+IGNORED_ANCHOR_TEXTS = {"send", "share"}
+TRACKED_LINK_CONTAINERS = "p a[href], li a[href], ol a[href]"
 STOPWORDS = {
     "a",
     "an",
@@ -606,6 +625,10 @@ def anchor_rel_flags(anchor) -> list[str]:
     return sorted({value.strip().lower() for value in values if value.strip()})
 
 
+def normalized_anchor_text(anchor) -> str:
+    return re.sub(r"\s+", " ", anchor.get_text(" ", strip=True)).strip()
+
+
 def extract_links_from_fragment(fragment_html: str, base_url: str, source_domain: str) -> list[OutgoingLink]:
     soup = BeautifulSoup(fragment_html, "html.parser")
     return extract_links_from_container(soup, base_url, source_domain)
@@ -615,9 +638,14 @@ def extract_links_from_container(container, base_url: str, source_domain: str) -
     results: list[OutgoingLink] = []
     source_registered = registered_domain(source_domain)
 
-    for anchor in container.select("a[href]"):
+    for anchor in container.select(TRACKED_LINK_CONTAINERS):
         href = (anchor.get("href") or "").strip()
         if not href:
+            continue
+        anchor_text = normalized_anchor_text(anchor)
+        if not anchor_text:
+            continue
+        if anchor_text.lower() in IGNORED_ANCHOR_TEXTS:
             continue
         absolute = urljoin(base_url, href)
         parts = urlsplit(absolute)
@@ -634,13 +662,15 @@ def extract_links_from_container(container, base_url: str, source_domain: str) -
             continue
         if target_domain == source_registered:
             continue
+        if target_domain in IGNORED_TARGET_DOMAINS:
+            continue
 
         rel_flags = anchor_rel_flags(anchor)
         results.append(
             OutgoingLink(
                 target_domain=target_domain,
                 target_url=normalized_target,
-                anchor_text=re.sub(r"\s+", " ", anchor.get_text(" ", strip=True)).strip(),
+                anchor_text=anchor_text,
                 rel_flags=rel_flags,
                 is_follow="nofollow" not in rel_flags,
             )
