@@ -998,6 +998,7 @@
           targetKey: null,
           anchorKey: null,
           dateKeys: [],
+          showAllRows: true,
           emptyMessage: "Aucun vendeur ne correspond aux filtres.",
           defaultSort: "raw_outgoing_links_count",
           defaultSortDir: -1,
@@ -1012,8 +1013,6 @@
             { key: "tf", label: "TF", type: "number" },
             { key: "rd", label: "RD", type: "number" },
             { key: "da", label: "DA", type: "number" },
-            { key: "category", label: "Categorie", type: "text" },
-            { key: "language", label: "Langue", type: "text" },
           ],
         },
         buyers: {
@@ -1036,8 +1035,6 @@
             { key: "tf", label: "TF", type: "number" },
             { key: "rd", label: "RD", type: "number" },
             { key: "da", label: "DA", type: "number" },
-            { key: "category", label: "Categorie", type: "text" },
-            { key: "language", label: "Langue", type: "text" },
           ],
         },
         links: {
@@ -1502,7 +1499,7 @@
         sortRows(rows, config, viewState);
 
         viewState.filteredRows = rows;
-        viewState.shownCount = Math.min(BATCH_SIZE, rows.length);
+        viewState.shownCount = config.showAllRows ? rows.length : Math.min(BATCH_SIZE, rows.length);
 
         renderViewHeader();
         renderColumnToggleBar();
@@ -1777,7 +1774,7 @@
         const button = document.getElementById("load-more-btn");
         const viewState = activeViewState();
 
-        if (viewState.filteredRows.length <= BATCH_SIZE) {
+        if (viewState.filteredRows.length <= BATCH_SIZE || viewState.shownCount >= viewState.filteredRows.length) {
           wrap.style.display = "none";
           return;
         }
