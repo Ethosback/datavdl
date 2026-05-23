@@ -617,7 +617,6 @@
         background: var(--blue-bg);
       }
 
-      .loading,
       .empty,
       .error-box {
         display: flex;
@@ -629,19 +628,6 @@
         color: var(--text-dim);
         font-family: var(--font-ui);
         text-align: center;
-      }
-
-      .spinner {
-        width: 32px;
-        height: 32px;
-        border: 3px solid var(--border);
-        border-top-color: var(--blue);
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-
-      @keyframes spin {
-        to { transform: rotate(360deg); }
       }
 
       .error-box strong {
@@ -919,44 +905,37 @@
       <section class="tabs" id="tabs"></section>
 
       <section class="panel">
-        <div id="dashboard-loading" class="loading">
-          <div class="spinner"></div>
-          Chargement des donnees...
+        <div class="panel-header">
+          <div>
+            <h2 id="view-title">Chargement...</h2>
+            <p id="view-description">Initialisation du tableau...</p>
+          </div>
+          <span class="result-count" id="result-count"></span>
         </div>
-        <div id="dashboard-error" class="error-box" hidden></div>
-        <div id="dashboard-shell" hidden>
-          <div class="panel-header">
-            <div>
-              <h2 id="view-title">Chargement...</h2>
-              <p id="view-description"></p>
-            </div>
-            <span class="result-count" id="result-count"></span>
-          </div>
 
-          <div class="table-toolbar">
-            <span class="toolbar-label">Colonnes</span>
-            <div class="col-toggle-bar" id="col-toggle-bar"></div>
-            <div class="toolbar-actions">
-              <button class="btn" id="clear-column-filters-btn">Effacer filtres de colonnes</button>
-              <button class="dl-btn" id="export-btn">Exporter CSV</button>
-            </div>
+        <div class="table-toolbar">
+          <span class="toolbar-label">Colonnes</span>
+          <div class="col-toggle-bar" id="col-toggle-bar"></div>
+          <div class="toolbar-actions">
+            <button class="btn" id="clear-column-filters-btn">Effacer filtres de colonnes</button>
+            <button class="dl-btn" id="export-btn">Exporter CSV</button>
           </div>
+        </div>
 
-          <div class="active-filters-bar" id="active-filters-bar"></div>
+        <div class="active-filters-bar" id="active-filters-bar"></div>
 
-          <div class="table-outer">
-            <div class="table-wrap">
-              <table>
-                <thead id="table-head"></thead>
-                <tbody id="table-body"></tbody>
-              </table>
-            </div>
+        <div class="table-outer">
+          <div class="table-wrap">
+            <table>
+              <thead id="table-head"></thead>
+              <tbody id="table-body"></tbody>
+            </table>
           </div>
+        </div>
 
-          <div class="load-more-wrap" id="load-more-wrap">
-            <div class="rows-info" id="rows-info"></div>
-            <button class="load-more-btn" id="load-more-btn">Charger plus</button>
-          </div>
+        <div class="load-more-wrap" id="load-more-wrap">
+          <div class="rows-info" id="rows-info"></div>
+          <button class="load-more-btn" id="load-more-btn">Charger plus</button>
         </div>
       </section>
     </main>
@@ -1805,7 +1784,7 @@
 
         wrap.style.display = "block";
         info.textContent = viewState.shownCount + " / " + viewState.filteredRows.length + " lignes affichees";
-        button.hidden = viewState.shownCount >= viewState.filteredRows.length;
+        button.style.display = viewState.shownCount >= viewState.filteredRows.length ? "none" : "inline-flex";
       }
 
       function renderTable() {
@@ -2140,10 +2119,24 @@
       }
 
       function showError(message) {
-        document.getElementById("dashboard-loading").hidden = true;
-        const error = document.getElementById("dashboard-error");
-        error.hidden = false;
-        error.innerHTML = `<strong>Erreur</strong><span>${escapeHtml(message)}</span>`;
+        document.getElementById("view-title").textContent = "Erreur de chargement";
+        document.getElementById("view-description").textContent = "Impossible d'initialiser le dashboard.";
+        document.getElementById("result-count").textContent = "";
+        document.getElementById("col-toggle-bar").innerHTML = "";
+        document.getElementById("active-filters-bar").classList.remove("visible");
+        document.getElementById("active-filters-bar").innerHTML = "";
+        document.getElementById("table-head").innerHTML = "";
+        document.getElementById("table-body").innerHTML = `
+          <tr>
+            <td colspan="1">
+              <div class="error-box">
+                <strong>Erreur</strong>
+                <span>${escapeHtml(message)}</span>
+              </div>
+            </td>
+          </tr>
+        `;
+        document.getElementById("load-more-wrap").style.display = "none";
       }
 
       async function loadData() {
@@ -2160,8 +2153,6 @@
           renderSummaryCards();
           renderTabs();
           syncTopFiltersWithView();
-          document.getElementById("dashboard-loading").hidden = true;
-          document.getElementById("dashboard-shell").hidden = false;
           applyFilters();
         } catch (error) {
           showError(error.message);
