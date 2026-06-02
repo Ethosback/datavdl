@@ -2,18 +2,18 @@
   {
     "source_domain": "gvu-immo.com",
     "target_domain": "mli.immo",
-    "links_count": 161,
-    "articles_count": 161,
+    "links_count": 203,
+    "articles_count": 203,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "pezenas-immobilier.fr",
     "target_domain": "sires-immobilier.fr",
-    "links_count": 68,
-    "articles_count": 19,
+    "links_count": 74,
+    "articles_count": 21,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "seloger-bureaux-commerces.com",
@@ -32,6 +32,14 @@
     "last_seen": "2026-05-23"
   },
   {
+    "source_domain": "seloger.com",
+    "target_domain": "legifrance.gouv.fr",
+    "links_count": 27,
+    "articles_count": 19,
+    "first_seen": "2026-05-24",
+    "last_seen": "2026-06-02"
+  },
+  {
     "source_domain": "credit-immo-conseil.com",
     "target_domain": "banque-france.fr",
     "links_count": 26,
@@ -40,20 +48,28 @@
     "last_seen": "2026-06-01"
   },
   {
-    "source_domain": "seloger.com",
+    "source_domain": "credit-immo-conseil.com",
     "target_domain": "legifrance.gouv.fr",
     "links_count": 25,
-    "articles_count": 17,
-    "first_seen": "2026-05-24",
-    "last_seen": "2026-06-01"
+    "articles_count": 7,
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "sud-habitat.fr",
     "target_domain": "journaldelagence.com",
-    "links_count": 23,
-    "articles_count": 13,
+    "links_count": 24,
+    "articles_count": 14,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "ad-immo.fr",
+    "target_domain": "legifrance.gouv.fr",
+    "links_count": 23,
+    "articles_count": 18,
+    "first_seen": "2026-05-23",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "immo-queven.fr",
@@ -64,12 +80,12 @@
     "last_seen": "2026-05-31"
   },
   {
-    "source_domain": "ad-immo.fr",
-    "target_domain": "legifrance.gouv.fr",
-    "links_count": 22,
-    "articles_count": 17,
+    "source_domain": "lc-immo.fr",
+    "target_domain": "akismet.com",
+    "links_count": 21,
+    "articles_count": 21,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "17immobilier.fr",
@@ -80,28 +96,20 @@
     "last_seen": "2026-05-27"
   },
   {
-    "source_domain": "lc-immo.fr",
-    "target_domain": "akismet.com",
+    "source_domain": "ad-immo.fr",
+    "target_domain": "service-public.fr",
     "links_count": 19,
     "articles_count": 19,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
-    "source_domain": "credit-immo-conseil.com",
-    "target_domain": "legifrance.gouv.fr",
-    "links_count": 19,
-    "articles_count": 6,
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-06-01"
-  },
-  {
-    "source_domain": "ad-immo.fr",
-    "target_domain": "service-public.fr",
+    "source_domain": "sud-habitat.fr",
+    "target_domain": "leblogpatrimoine.com",
     "links_count": 18,
-    "articles_count": 18,
-    "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "articles_count": 6,
+    "first_seen": "2026-05-24",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "immo-queven.fr",
@@ -120,12 +128,12 @@
     "last_seen": "2026-05-23"
   },
   {
-    "source_domain": "sud-habitat.fr",
-    "target_domain": "leblogpatrimoine.com",
-    "links_count": 15,
-    "articles_count": 5,
-    "first_seen": "2026-05-24",
-    "last_seen": "2026-05-31"
+    "source_domain": "argent-plus-plus.fr",
+    "target_domain": "les-investisseurs-affranchis.com",
+    "links_count": 13,
+    "articles_count": 3,
+    "first_seen": "2026-05-27",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "selogerneuf.com",
@@ -134,6 +142,22 @@
     "articles_count": 10,
     "first_seen": "2026-05-23",
     "last_seen": "2026-05-23"
+  },
+  {
+    "source_domain": "isolation-thermique.org",
+    "target_domain": "ac-toiture-92.fr",
+    "links_count": 12,
+    "articles_count": 11,
+    "first_seen": "2026-05-23",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "pierresetmer.fr",
+    "target_domain": "georisques.gouv.fr",
+    "links_count": 12,
+    "articles_count": 12,
+    "first_seen": "2026-05-23",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "atlasimmobilier.com",
@@ -153,43 +177,51 @@
   },
   {
     "source_domain": "isolation-thermique.org",
-    "target_domain": "ac-toiture-92.fr",
+    "target_domain": "ac-toiture-clamart.fr",
     "links_count": 11,
-    "articles_count": 10,
+    "articles_count": 11,
     "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
-    "source_domain": "isolation-thermique.org",
-    "target_domain": "ac-toiture-clamart.fr",
-    "links_count": 10,
-    "articles_count": 10,
-    "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
+    "source_domain": "credit-immo-conseil.com",
+    "target_domain": "service-public.fr",
+    "links_count": 11,
+    "articles_count": 5,
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "rachat-credit-guide.com",
     "target_domain": "banque-france.fr",
-    "links_count": 10,
-    "articles_count": 6,
+    "links_count": 11,
+    "articles_count": 7,
     "first_seen": "2026-05-28",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
-    "source_domain": "pierresetmer.fr",
-    "target_domain": "georisques.gouv.fr",
-    "links_count": 9,
-    "articles_count": 9,
-    "first_seen": "2026-05-23",
-    "last_seen": "2026-06-01"
-  },
-  {
-    "source_domain": "argent-plus-plus.fr",
-    "target_domain": "les-investisseurs-affranchis.com",
-    "links_count": 9,
-    "articles_count": 2,
+    "source_domain": "assurance-loyer-impaye-guide.com",
+    "target_domain": "legifrance.gouv.fr",
+    "links_count": 10,
+    "articles_count": 4,
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-28"
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "assurance-loyer-impaye-guide.com",
+    "target_domain": "service-public.fr",
+    "links_count": 9,
+    "articles_count": 4,
+    "first_seen": "2026-05-27",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "credit-immo-conseil.com",
+    "target_domain": "anil.org",
+    "links_count": 9,
+    "articles_count": 4,
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "credit-immo-conseil.com",
@@ -208,6 +240,14 @@
     "last_seen": "2026-05-23"
   },
   {
+    "source_domain": "ad-immo.fr",
+    "target_domain": "banque-france.fr",
+    "links_count": 8,
+    "articles_count": 8,
+    "first_seen": "2026-05-23",
+    "last_seen": "2026-06-02"
+  },
+  {
     "source_domain": "monimmeuble.com",
     "target_domain": "legifrance.gouv.fr",
     "links_count": 8,
@@ -224,36 +264,12 @@
     "last_seen": "2026-06-01"
   },
   {
-    "source_domain": "assurance-loyer-impaye-guide.com",
-    "target_domain": "legifrance.gouv.fr",
+    "source_domain": "ad-immo.fr",
+    "target_domain": "insee.fr",
     "links_count": 7,
-    "articles_count": 3,
+    "articles_count": 7,
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-29"
-  },
-  {
-    "source_domain": "assurance-loyer-impaye-guide.com",
-    "target_domain": "service-public.fr",
-    "links_count": 7,
-    "articles_count": 3,
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-29"
-  },
-  {
-    "source_domain": "credit-immo-conseil.com",
-    "target_domain": "anil.org",
-    "links_count": 7,
-    "articles_count": 3,
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-06-01"
-  },
-  {
-    "source_domain": "credit-immo-conseil.com",
-    "target_domain": "service-public.fr",
-    "links_count": 7,
-    "articles_count": 4,
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-06-01"
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "seloger-construire.com",
@@ -270,14 +286,6 @@
     "articles_count": 6,
     "first_seen": "2026-05-23",
     "last_seen": "2026-05-23"
-  },
-  {
-    "source_domain": "ad-immo.fr",
-    "target_domain": "banque-france.fr",
-    "links_count": 6,
-    "articles_count": 6,
-    "first_seen": "2026-05-23",
-    "last_seen": "2026-05-28"
   },
   {
     "source_domain": "sud-habitat.fr",
@@ -297,14 +305,6 @@
   },
   {
     "source_domain": "ad-immo.fr",
-    "target_domain": "insee.fr",
-    "links_count": 6,
-    "articles_count": 6,
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-06-01"
-  },
-  {
-    "source_domain": "ad-immo.fr",
     "target_domain": "impots.gouv.fr",
     "links_count": 6,
     "articles_count": 5,
@@ -320,12 +320,52 @@
     "last_seen": "2026-06-01"
   },
   {
+    "source_domain": "web-de-france.com",
+    "target_domain": "certyneo.com",
+    "links_count": 6,
+    "articles_count": 6,
+    "first_seen": "2026-05-29",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "focus-actualite.com",
+    "target_domain": "certyneo.com",
+    "links_count": 6,
+    "articles_count": 6,
+    "first_seen": "2026-05-29",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lestutosdelimmo.fr",
+    "target_domain": "energie-info.fr",
+    "links_count": 6,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "cannes-actus.com",
+    "target_domain": "tiktok.com",
+    "links_count": 6,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
     "source_domain": "actual-immo.fr",
     "target_domain": "louveinvest.com",
     "links_count": 5,
     "articles_count": 1,
     "first_seen": "2026-05-27",
     "last_seen": "2026-05-27"
+  },
+  {
+    "source_domain": "assurance-loyer-impaye-guide.com",
+    "target_domain": "banque-france.fr",
+    "links_count": 5,
+    "articles_count": 4,
+    "first_seen": "2026-05-27",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "destindenfer.com",
@@ -376,14 +416,6 @@
     "last_seen": "2026-05-28"
   },
   {
-    "source_domain": "assurance-loyer-impaye-guide.com",
-    "target_domain": "banque-france.fr",
-    "links_count": 4,
-    "articles_count": 3,
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-29"
-  },
-  {
     "source_domain": "seloger.com",
     "target_domain": "caf.fr",
     "links_count": 4,
@@ -416,6 +448,14 @@
     "last_seen": "2026-05-29"
   },
   {
+    "source_domain": "credit-immo-conseil.com",
+    "target_domain": "impots.gouv.fr",
+    "links_count": 4,
+    "articles_count": 2,
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-06-02"
+  },
+  {
     "source_domain": "rachat-credit-guide.com",
     "target_domain": "orias.fr",
     "links_count": 4,
@@ -424,20 +464,12 @@
     "last_seen": "2026-05-29"
   },
   {
-    "source_domain": "web-de-france.com",
-    "target_domain": "certyneo.com",
+    "source_domain": "lestutosdelimmo.fr",
+    "target_domain": "bemove.fr",
     "links_count": 4,
-    "articles_count": 4,
-    "first_seen": "2026-05-29",
-    "last_seen": "2026-06-01"
-  },
-  {
-    "source_domain": "focus-actualite.com",
-    "target_domain": "certyneo.com",
-    "links_count": 4,
-    "articles_count": 4,
-    "first_seen": "2026-05-29",
-    "last_seen": "2026-06-01"
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "cannes-actus.com",
@@ -646,6 +678,22 @@
     "articles_count": 3,
     "first_seen": "2026-06-01",
     "last_seen": "2026-06-01"
+  },
+  {
+    "source_domain": "rachat-credit-guide.com",
+    "target_domain": "legifrance.gouv.fr",
+    "links_count": 3,
+    "articles_count": 2,
+    "first_seen": "2026-06-01",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "3ehabitat.fr",
+    "target_domain": "vevor.fr",
+    "links_count": 3,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "selogerneuf.com",
@@ -1216,6 +1264,22 @@
     "last_seen": "2026-05-27"
   },
   {
+    "source_domain": "immobilierjuridique.fr",
+    "target_domain": "akismet.com",
+    "links_count": 2,
+    "articles_count": 2,
+    "first_seen": "2026-05-27",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "monimmoneuf.fr",
+    "target_domain": "notaires.fr",
+    "links_count": 2,
+    "articles_count": 2,
+    "first_seen": "2026-05-27",
+    "last_seen": "2026-06-02"
+  },
+  {
     "source_domain": "bourseo.fr",
     "target_domain": "taxmanager.ch",
     "links_count": 2,
@@ -1270,6 +1334,14 @@
     "articles_count": 2,
     "first_seen": "2026-05-28",
     "last_seen": "2026-05-28"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "cs-system.ch",
+    "links_count": 2,
+    "articles_count": 2,
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "ameliorer-mon-logement.fr",
@@ -1361,14 +1433,6 @@
   },
   {
     "source_domain": "credit-immo-conseil.com",
-    "target_domain": "impots.gouv.fr",
-    "links_count": 2,
-    "articles_count": 1,
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-05-28"
-  },
-  {
-    "source_domain": "credit-immo-conseil.com",
     "target_domain": "insee.fr",
     "links_count": 2,
     "articles_count": 2,
@@ -1398,6 +1462,14 @@
     "articles_count": 2,
     "first_seen": "2026-05-29",
     "last_seen": "2026-06-01"
+  },
+  {
+    "source_domain": "seloger.com",
+    "target_domain": "tf1info.fr",
+    "links_count": 2,
+    "articles_count": 2,
+    "first_seen": "2026-05-29",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "maison-monde.com",
@@ -1686,6 +1758,38 @@
     "articles_count": 2,
     "first_seen": "2026-06-01",
     "last_seen": "2026-06-01"
+  },
+  {
+    "source_domain": "rachat-credit-guide.com",
+    "target_domain": "cnil.fr",
+    "links_count": 2,
+    "articles_count": 2,
+    "first_seen": "2026-06-01",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "coquillagesclaude.fr",
+    "target_domain": "riviera-et-bar.fr",
+    "links_count": 2,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "rouxel-immo.fr",
+    "target_domain": "relocation-in-paris.fr",
+    "links_count": 2,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "mon-cercle-btp.fr",
+    "target_domain": "cougnaud.com",
+    "links_count": 2,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
   },
   {
     "source_domain": "nostrodomus.fr",
@@ -8032,14 +8136,6 @@
     "last_seen": "2026-05-27"
   },
   {
-    "source_domain": "immobilierjuridique.fr",
-    "target_domain": "akismet.com",
-    "links_count": 1,
-    "articles_count": 1,
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27"
-  },
-  {
     "source_domain": "investissementimmobilier.xyz",
     "target_domain": "scpi-cashback.com",
     "links_count": 1,
@@ -8122,14 +8218,6 @@
   {
     "source_domain": "co-proprietaire.fr",
     "target_domain": "gerlok.fr",
-    "links_count": 1,
-    "articles_count": 1,
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27"
-  },
-  {
-    "source_domain": "monimmoneuf.fr",
-    "target_domain": "notaires.fr",
     "links_count": 1,
     "articles_count": 1,
     "first_seen": "2026-05-27",
@@ -8858,14 +8946,6 @@
   {
     "source_domain": "weareonline.fr",
     "target_domain": "geometre-paris.fr",
-    "links_count": 1,
-    "articles_count": 1,
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-05-28"
-  },
-  {
-    "source_domain": "weareonline.fr",
-    "target_domain": "cs-system.ch",
     "links_count": 1,
     "articles_count": 1,
     "first_seen": "2026-05-28",
@@ -9810,14 +9890,6 @@
   {
     "source_domain": "seloger.com",
     "target_domain": "actionlogement.fr",
-    "links_count": 1,
-    "articles_count": 1,
-    "first_seen": "2026-05-29",
-    "last_seen": "2026-05-29"
-  },
-  {
-    "source_domain": "seloger.com",
-    "target_domain": "tf1info.fr",
     "links_count": 1,
     "articles_count": 1,
     "first_seen": "2026-05-29",
@@ -14360,19 +14432,1035 @@
     "last_seen": "2026-06-01"
   },
   {
-    "source_domain": "rachat-credit-guide.com",
-    "target_domain": "legifrance.gouv.fr",
+    "source_domain": "seloger.com",
+    "target_domain": "cadastre.gouv.fr",
     "links_count": 1,
     "articles_count": 1,
-    "first_seen": "2026-06-01",
-    "last_seen": "2026-06-01"
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
   },
   {
-    "source_domain": "rachat-credit-guide.com",
-    "target_domain": "cnil.fr",
+    "source_domain": "wikio.fr",
+    "target_domain": "assurly.com",
     "links_count": 1,
     "articles_count": 1,
-    "first_seen": "2026-06-01",
-    "last_seen": "2026-06-01"
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "monimmeuble.com",
+    "target_domain": "vaneau.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "monimmeuble.com",
+    "target_domain": "notairesdugrandparis.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "actual-immo.fr",
+    "target_domain": "atelier-peintures-matieres.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "visiter-bordeaux.eu",
+    "target_domain": "proprietes-privees.org",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "habitat-groupe.be",
+    "target_domain": "hocuspocus-asbl.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "just-business.fr",
+    "target_domain": "technimafrance.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "akbusiness.fr",
+    "target_domain": "conso.gouv.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "ba9.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "energyandco.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "ethicarchi.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "eurl-dasilva-manuel.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "corsicarchitecture.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "electricienhonfleur.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "optimum-conception-fluides.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "pcs-mathis.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "projectec.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "projet-clim.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "wordpress.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "serbtp.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "vervier-menuiseries.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "renovbox.com",
+    "target_domain": "fer-et-feu.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "airnews.net",
+    "target_domain": "chatbotgpt.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "actumag.info",
+    "target_domain": "ampelio.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "actumag.info",
+    "target_domain": "cercll.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "actumag.info",
+    "target_domain": "chatbotgpt.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "tropheesdelamaison.com",
+    "target_domain": "jktechnic.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lamaisondelimmobilier.org",
+    "target_domain": "miramo.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "abracadabar.fr",
+    "target_domain": "billy-ergonome-equin.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "abracadabar.fr",
+    "target_domain": "aurel-taxi.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "abracadabar.fr",
+    "target_domain": "santeapero.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immodeco.net",
+    "target_domain": "studi.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immodeco.net",
+    "target_domain": "service-public.gouv.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immobilierneuf1clic1toit.fr",
+    "target_domain": "cmso.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "esneuxmedical.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "k2print.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "guersanguillaume.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "artipro-electricite.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "dubaimmo.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "artipro-plomberie.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "creasud-etancheite-piscine.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "mr-bricolage.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "apcescache.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "universal-robots.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "freelancerepublik.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "achillebyfhe.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "sofinco.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "iziday.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "shashel.eu",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "coverhousse.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "weareonline.fr",
+    "target_domain": "1parrainage.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "pluriel-immobilier.com",
+    "target_domain": "conceptalu.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "logic-immo.com",
+    "target_domain": "seloger.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "logic-immo.com",
+    "target_domain": "notaires.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "proprilib.fr",
+    "target_domain": "levrard-debouchage.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lestutosdelimmo.fr",
+    "target_domain": "enedis.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lestutosdelimmo.fr",
+    "target_domain": "grdf.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lestutosdelimmo.fr",
+    "target_domain": "service-public.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immo-land.fr",
+    "target_domain": "cmso.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "metiersdart-artisanat.com",
+    "target_domain": "abby.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "metiersdart-artisanat.com",
+    "target_domain": "mezzanine-industrielle.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "metiersdart-artisanat.com",
+    "target_domain": "infonet.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immob.biz",
+    "target_domain": "proxymo-lift.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immob.biz",
+    "target_domain": "meilleurtaux.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "chrono-immobilier.fr",
+    "target_domain": "proxymo-lift.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "aude-location.fr",
+    "target_domain": "geoportail.gouv.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "gresel.org",
+    "target_domain": "diy-booknookkit.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "rouxel-immo.fr",
+    "target_domain": "cafpi.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "assfass.fr",
+    "target_domain": "business-office-monaco.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "tiptopdecoetmaison.com",
+    "target_domain": "proxymo-lift.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "libreinfo.org",
+    "target_domain": "eurocaro13.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "welcomeimmo.net",
+    "target_domain": "conceptalu.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "bricolo-blogger.com",
+    "target_domain": "vistadeco.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "bricolo-blogger.com",
+    "target_domain": "elle.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immovite.fr",
+    "target_domain": "conceptalu.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "wmtocash.com",
+    "target_domain": "lexcodex.ch",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "monbloghabitat.com",
+    "target_domain": "piscines-asp.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "maisons-deco-jardin.com",
+    "target_domain": "goensol.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "maisons-deco-jardin.com",
+    "target_domain": "artiteq.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lgpimmo.fr",
+    "target_domain": "lesformationsdelouis.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lgpimmo.fr",
+    "target_domain": "domeria.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lgpimmo.fr",
+    "target_domain": "info.gouv.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "astuceimmo.fr",
+    "target_domain": "april.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "magazine-immobilier.fr",
+    "target_domain": "simonaubin-avocat.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "frci-idf.com",
+    "target_domain": "abby.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "frci-idf.com",
+    "target_domain": "infonet.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "fcmerchtem2000.be",
+    "target_domain": "ludoandco.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "trouve-immobilier.fr",
+    "target_domain": "are-immo.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "aginius.fr",
+    "target_domain": "meilleur-compte-a-terme.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "aginius.fr",
+    "target_domain": "service-public.gouv.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immoproxima.fr",
+    "target_domain": "deltamod.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "svmmac.fr",
+    "target_domain": "ma-brosse-de-toilette.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "svmmac.fr",
+    "target_domain": "ambiance-neon.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "maisonreflet.fr",
+    "target_domain": "plombiers-belgique.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "maisonreflet.fr",
+    "target_domain": "vitriers-belgique.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "mittelwihr.eu",
+    "target_domain": "pubert.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "jardinot.org",
+    "target_domain": "daniel-moquet.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "jardinot.org",
+    "target_domain": "pagesjaunes.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "jardinot.org",
+    "target_domain": "mon-gazon-synthetique.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "famin-immobilier.fr",
+    "target_domain": "immprove.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "pluscestsimple.com",
+    "target_domain": "cafpi.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "personacourtage.fr",
+    "target_domain": "macif.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "cannes-actus.com",
+    "target_domain": "rosengart.mc",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "kalimmo.fr",
+    "target_domain": "vestizy.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "yakaimmo.fr",
+    "target_domain": "moncoachplomberie.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "master-patrimoine.fr",
+    "target_domain": "cafpi.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "ad-immo.fr",
+    "target_domain": "amf-france.org",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "lefest.org",
+    "target_domain": "laboutiquedestoons.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immocomplet.fr",
+    "target_domain": "immprove.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "ssnf2016.org",
+    "target_domain": "santeapero.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "ssnf2016.org",
+    "target_domain": "sante-relations-humaines.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "flash-lassuranceretraite.fr",
+    "target_domain": "ride-du-lion.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "immo-palast.com",
+    "target_domain": "refaire-cuisine.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "appartement-geneve.com",
+    "target_domain": "plan-travail-quartz.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "leparisdelimmobilier.com",
+    "target_domain": "lesformationsdelouis.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "co-proprietaire.fr",
+    "target_domain": "ladepeche.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "co-proprietaire.fr",
+    "target_domain": "sudouest.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "domindo.fr",
+    "target_domain": "coval-construction.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "dijon-lesportesdusud.fr",
+    "target_domain": "sante-relation.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "scolinfo.net",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "etudefacile.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "lavoixdefrance.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "mondedutravail.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "union-habitat.org",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "amv-immo.fr",
+    "target_domain": "expert-zoom.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "bourseo.fr",
+    "target_domain": "codebic.com",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "bourseo.fr",
+    "target_domain": "cryptofinder.fr",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
+  },
+  {
+    "source_domain": "btfinance.fr",
+    "target_domain": "levillage1.be",
+    "links_count": 1,
+    "articles_count": 1,
+    "first_seen": "2026-06-02",
+    "last_seen": "2026-06-02"
   }
 ]
