@@ -30,13 +30,15 @@ jobs:
 
       - name: Run VDL monitor
         env:
-          KEYBERT_MODEL: ${{ vars.KEYBERT_MODEL || 'all-MiniLM-L6-v2' }}
           SITEMAP_TIMEOUT: ${{ vars.SITEMAP_TIMEOUT || '25' }}
+          SITEMAP_CONNECT_TIMEOUT: ${{ vars.SITEMAP_CONNECT_TIMEOUT || '8' }}
           PAGE_TIMEOUT: ${{ vars.PAGE_TIMEOUT || '20' }}
           HTTP_RETRIES: ${{ vars.HTTP_RETRIES || '3' }}
-          SITEMAP_WORKERS: ${{ vars.SITEMAP_WORKERS || '12' }}
+          SITEMAP_WORKERS: ${{ vars.SITEMAP_WORKERS || '20' }}
+          MAX_SITEMAP_DOCUMENTS: ${{ vars.MAX_SITEMAP_DOCUMENTS || '150' }}
+          MAX_SITEMAP_SECONDS_PER_SITE: ${{ vars.MAX_SITEMAP_SECONDS_PER_SITE || '90' }}
           SECOND_PASS_SITEMAP_TIMEOUT: ${{ vars.SECOND_PASS_SITEMAP_TIMEOUT || '40' }}
-          SECOND_PASS_SITEMAP_WORKERS: ${{ vars.SECOND_PASS_SITEMAP_WORKERS || '4' }}
+          SECOND_PASS_SITEMAP_WORKERS: ${{ vars.SECOND_PASS_SITEMAP_WORKERS || '6' }}
           PAGE_WORKERS: ${{ vars.PAGE_WORKERS || '24' }}
         run: python -u scripts/monitor_vdl.py
 

@@ -10,7 +10,7 @@ import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict, dataclass
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Iterable
 from urllib.parse import urljoin, urlsplit, urlunsplit
@@ -20,7 +20,6 @@ import requests
 import tldextract
 import trafilatura
 from bs4 import BeautifulSoup
-from keybert import KeyBERT
 
 
 EXPECTED_HEADERS = [
@@ -55,13 +54,19 @@ SITEMAP_TIMEOUT = int(os.getenv("SITEMAP_TIMEOUT", "25"))
 PAGE_TIMEOUT = int(os.getenv("PAGE_TIMEOUT", "20"))
 HTTP_RETRIES = int(os.getenv("HTTP_RETRIES", "3"))
 SITEMAP_WORKERS = int(os.getenv("SITEMAP_WORKERS", "12"))
+SITEMAP_CONNECT_TIMEOUT = int(os.getenv("SITEMAP_CONNECT_TIMEOUT", "8"))
 SECOND_PASS_SITEMAP_TIMEOUT = int(os.getenv("SECOND_PASS_SITEMAP_TIMEOUT", "40"))
 SECOND_PASS_SITEMAP_WORKERS = int(os.getenv("SECOND_PASS_SITEMAP_WORKERS", "4"))
 PAGE_WORKERS = int(os.getenv("PAGE_WORKERS", "16"))
 PROGRESS_EVERY = int(os.getenv("PROGRESS_EVERY", "25"))
-KEYBERT_MODEL = os.getenv("KEYBERT_MODEL", "all-MiniLM-L6-v2")
 MAX_NEW_URLS_PER_SITE = int(os.getenv("MAX_NEW_URLS_PER_SITE", "100"))
+MAX_SITEMAP_DOCUMENTS = int(os.getenv("MAX_SITEMAP_DOCUMENTS", "150"))
+MAX_SITEMAP_SECONDS_PER_SITE = int(os.getenv("MAX_SITEMAP_SECONDS_PER_SITE", "90"))
 RETRYABLE_STATUS_CODES = {408, 425, 429, 500, 502, 503, 504}
+DEFINITIVE_SITEMAP_STATUS_CODES = {403, 404, 410, 415}
+DEFINITIVE_SITEMAP_DELETE_AFTER_DAYS = int(
+    os.getenv("DEFINITIVE_SITEMAP_DELETE_AFTER_DAYS", "7")
+)
 IGNORED_SCHEMES = {"mailto", "tel", "javascript", "data"}
 IGNORED_TARGET_DOMAINS = {
     "amazon.com",
@@ -82,38 +87,6 @@ IGNORED_TARGET_DOMAINS = {
 }
 IGNORED_ANCHOR_TEXTS = {"send", "share"}
 TRACKED_LINK_CONTAINERS = "p a[href], li a[href], ol a[href]"
-STOPWORDS = {
-    "a",
-    "an",
-    "and",
-    "au",
-    "aux",
-    "avec",
-    "ce",
-    "ces",
-    "comment",
-    "dans",
-    "de",
-    "des",
-    "du",
-    "en",
-    "et",
-    "for",
-    "guide",
-    "how",
-    "la",
-    "le",
-    "les",
-    "ou",
-    "par",
-    "pour",
-    "sur",
-    "the",
-    "to",
-    "un",
-    "une",
-}
-
 TRACKED_CONTENT_SELECTORS = [
     "article",
     "main article",
@@ -206,6 +179,8 @@ class SitemapScanResult:
     site: SellerSite
     current_urls: set[str]
     crawl_complete: bool
+    failure_type: str = ""
+    failure_code: int | None = None
 
 
 def log_info(message: str) -> None:
@@ -273,7 +248,11 @@ def fetch_response(
     url: str,
     timeout: int,
 ) -> requests.Response:
-    response = session.get(url, timeout=timeout, allow_redirects=True)
+    response = session.get(
+        url,
+        timeout=(max(1, min(SITEMAP_CONNECT_TIMEOUT, timeout)), timeout),
+        allow_redirects=True,
+    )
     if response.status_code >= 400:
         response.raise_for_status()
     return response
@@ -328,6 +307,10 @@ def ever_seen_path(base_dir: Path, site: SellerSite) -> Path:
     return base_dir / "data" / "state" / "ever_seen" / f"{slugify(site.domain)}.json"
 
 
+def sitemap_failures_path(base_dir: Path) -> Path:
+    return base_dir / "data" / "state" / "sitemap-failures.json"
+
+
 def page_events_path(base_dir: Path, day: str) -> Path:
     return base_dir / "data" / "events" / "pages" / f"{day}.jsonl.gz"
 
@@ -360,6 +343,13 @@ def save_url_set(path: Path, urls: Iterable[str], sitemap_url: str | None = None
 def append_jsonl_gz(path: Path, rows: Iterable[dict]) -> None:
     ensure_dir(path.parent)
     with gzip.open(path, "at", encoding="utf-8") as handle:
+        for row in rows:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def rewrite_jsonl_gz(path: Path, rows: Iterable[dict]) -> None:
+    ensure_dir(path.parent)
+    with gzip.open(path, "wt", encoding="utf-8") as handle:
         for row in rows:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
@@ -428,6 +418,118 @@ def prune_site_state(base_dir: Path, site: SellerSite) -> None:
             pass
 
 
+def purge_site_events(base_dir: Path, domain: str) -> None:
+    for path in sorted((base_dir / "data" / "events" / "pages").glob("*.jsonl.gz")):
+        rows = []
+        changed = False
+        with gzip.open(path, "rt", encoding="utf-8") as handle:
+            for line in handle:
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                if row.get("source_domain") == domain:
+                    changed = True
+                    continue
+                rows.append(row)
+        if changed:
+            rewrite_jsonl_gz(path, rows)
+
+    for path in sorted((base_dir / "data" / "events" / "links").glob("*.jsonl.gz")):
+        rows = []
+        changed = False
+        with gzip.open(path, "rt", encoding="utf-8") as handle:
+            for line in handle:
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                if row.get("source_domain") == domain or row.get("target_domain") == domain:
+                    changed = True
+                    continue
+                rows.append(row)
+        if changed:
+            rewrite_jsonl_gz(path, rows)
+
+
+def load_sitemap_failures(base_dir: Path) -> dict[str, dict[str, object]]:
+    path = sitemap_failures_path(base_dir)
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+    return {
+        str(domain).strip().lower(): data
+        for domain, data in payload.items()
+        if isinstance(data, dict)
+    }
+
+
+def save_sitemap_failures(base_dir: Path, failures: dict[str, dict[str, object]]) -> None:
+    path = sitemap_failures_path(base_dir)
+    ensure_dir(path.parent)
+    path.write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def update_failure_streak(
+    previous: dict[str, object] | None,
+    today_value: str,
+    failure_code: int,
+) -> dict[str, object]:
+    if not previous:
+        return {
+            "failure_code": failure_code,
+            "consecutive_days": 1,
+            "first_seen": today_value,
+            "last_seen": today_value,
+        }
+
+    previous_code = previous.get("failure_code")
+    previous_last_seen = str(previous.get("last_seen") or "")
+    previous_days = int(previous.get("consecutive_days") or 0)
+    try:
+        previous_date = date.fromisoformat(previous_last_seen)
+    except ValueError:
+        previous_date = None
+    today_date = date.fromisoformat(today_value)
+
+    consecutive_days = 1
+    if (
+        previous_code == failure_code
+        and previous_date is not None
+        and today_date - previous_date == timedelta(days=1)
+    ):
+        consecutive_days = previous_days + 1
+
+    first_seen = str(previous.get("first_seen") or today_value)
+    if consecutive_days == 1:
+        first_seen = today_value
+
+    return {
+        "failure_code": failure_code,
+        "consecutive_days": consecutive_days,
+        "first_seen": first_seen,
+        "last_seen": today_value,
+    }
+
+
+def clear_failure_state(failures: dict[str, dict[str, object]], domain: str) -> None:
+    failures.pop(domain, None)
+
+
+def classify_sitemap_request_error(exc: requests.RequestException) -> tuple[str, int | None]:
+    if isinstance(exc, requests.HTTPError):
+        status_code = exc.response.status_code if exc.response is not None else None
+        if status_code in DEFINITIVE_SITEMAP_STATUS_CODES:
+            return "definitive_http", status_code
+        return "http_error", status_code
+    return "request_error", None
+
+
 def read_sellers(base_dir: Path) -> list[SellerSite]:
     input_path = catalog_path(base_dir)
     if not input_path.exists():
@@ -480,15 +582,26 @@ def parse_sitemap(
     sitemap_url: str,
     visited: set[str] | None = None,
     timeout: int | None = None,
-) -> tuple[set[str], bool]:
+    deadline: float | None = None,
+    documents_seen: list[int] | None = None,
+) -> tuple[set[str], bool, str, int | None]:
     normalized_sitemap_url = normalize_url(sitemap_url)
     if not normalized_sitemap_url:
-        return set(), False
+        return set(), False, "invalid_url", None
     if visited is None:
         visited = set()
+    if documents_seen is None:
+        documents_seen = [0]
+    if deadline is not None and time.monotonic() >= deadline:
+        log_warn(f"budget sitemap atteint avant fetch: {normalized_sitemap_url}")
+        return set(), False, "deadline_exceeded", None
     if normalized_sitemap_url in visited:
-        return set(), True
+        return set(), True, "", None
+    if documents_seen[0] >= MAX_SITEMAP_DOCUMENTS:
+        log_warn(f"limite de sitemaps imbriqués atteinte: {normalized_sitemap_url}")
+        return set(), False, "max_sitemap_documents", None
     visited.add(normalized_sitemap_url)
+    documents_seen[0] += 1
 
     try:
         response = get_with_retries(session, normalized_sitemap_url, timeout or SITEMAP_TIMEOUT)
@@ -496,14 +609,15 @@ def parse_sitemap(
         final_url = response.url
     except requests.RequestException as exc:
         log_warn(f"sitemap inaccessible: {normalized_sitemap_url} ({exc})")
-        return set(), False
+        failure_type, failure_code = classify_sitemap_request_error(exc)
+        return set(), False, failure_type, failure_code
 
     xml_bytes = maybe_decompress(raw_bytes, final_url)
     try:
         root = ET.fromstring(xml_bytes)
     except ET.ParseError as exc:
         log_warn(f"XML invalide: {normalized_sitemap_url} ({exc})")
-        return set(), False
+        return set(), False, "invalid_xml", None
 
     root_name = local_name(root.tag)
     if root_name == "urlset":
@@ -516,11 +630,13 @@ def parse_sitemap(
                     normalized = normalize_url(child.text)
                     if normalized:
                         urls.add(normalized)
-        return urls, True
+        return urls, True, "", None
 
     if root_name == "sitemapindex":
         urls: set[str] = set()
         all_ok = True
+        failure_type = ""
+        failure_code: int | None = None
         for sitemap_node in root:
             if local_name(sitemap_node.tag) != "sitemap":
                 continue
@@ -531,24 +647,43 @@ def parse_sitemap(
                     break
             if not child_url:
                 continue
-            child_urls, child_ok = parse_sitemap(session, child_url, visited, timeout=timeout)
+            child_urls, child_ok, child_failure_type, child_failure_code = parse_sitemap(
+                session,
+                child_url,
+                visited,
+                timeout=timeout,
+                deadline=deadline,
+                documents_seen=documents_seen,
+            )
             urls.update(child_urls)
             if not child_ok:
                 all_ok = False
-        return urls, all_ok
+                if not failure_type:
+                    failure_type = child_failure_type
+                    failure_code = child_failure_code
+        return urls, all_ok, failure_type, failure_code
 
     log_warn(f"format XML non géré: {normalized_sitemap_url}")
-    return set(), False
+    return set(), False, "unsupported_xml", None
 
 
 def scan_site_sitemap(site: SellerSite, timeout: int) -> SitemapScanResult:
     session = session_with_headers()
     try:
-        current_urls, crawl_complete = parse_sitemap(session, site.sitemap_url, timeout=timeout)
+        deadline = time.monotonic() + max(1, MAX_SITEMAP_SECONDS_PER_SITE)
+        current_urls, crawl_complete, failure_type, failure_code = parse_sitemap(
+            session,
+            site.sitemap_url,
+            timeout=timeout,
+            deadline=deadline,
+            documents_seen=[0],
+        )
         return SitemapScanResult(
             site=site,
             current_urls=current_urls,
             crawl_complete=crawl_complete,
+            failure_type=failure_type,
+            failure_code=failure_code,
         )
     finally:
         session.close()
@@ -579,7 +714,10 @@ def collect_sitemap_results(
             try:
                 result = future.result()
                 results[site.domain] = result
-                if not result.crawl_complete:
+                if (
+                    not result.crawl_complete
+                    and result.failure_code not in DEFINITIVE_SITEMAP_STATUS_CODES
+                ):
                     retry_sites.append(site)
             except Exception as exc:
                 log_warn(f"échec inattendu sur le sitemap de {site.domain} ({exc})")
@@ -590,32 +728,6 @@ def collect_sitemap_results(
                 log_info(f"{label}: {completed_sites}/{total_sites}")
 
     return results, retry_sites
-
-
-def focus_title(title: str) -> str:
-    cleaned = re.sub(r"\s+", " ", title).strip()
-    if not cleaned:
-        return ""
-    parts = [part.strip() for part in re.split(r"\s(?:\||-|–|:|»)\s", cleaned) if part.strip()]
-    return parts[0] if parts else cleaned
-
-
-def extract_keyword_from_title(extractor: KeyBERT, title: str) -> str:
-    base_text = focus_title(title)
-    if not base_text:
-        return ""
-    for ngram_range in ((2, 3), (1, 2), (1, 1)):
-        keywords = extractor.extract_keywords(
-            base_text,
-            keyphrase_ngram_range=ngram_range,
-            stop_words=list(STOPWORDS),
-            top_n=5,
-        )
-        for phrase, _score in keywords:
-            phrase = phrase.strip()
-            if phrase:
-                return phrase
-    return ""
 
 
 def anchor_rel_flags(anchor) -> list[str]:
@@ -745,6 +857,7 @@ def write_json(path: Path, payload) -> None:
 def process() -> int:
     base_dir = repo_root()
     today = date.today().isoformat()
+    sitemap_failures = load_sitemap_failures(base_dir)
     sellers = read_sellers(base_dir)
     if not sellers:
         log_info("Aucun site vendeur trouvé dans domains-vendeurs.csv")
@@ -781,6 +894,37 @@ def process() -> int:
 
         current_urls = result.current_urls
         crawl_complete = result.crawl_complete
+        failure_code = result.failure_code
+        if failure_code in DEFINITIVE_SITEMAP_STATUS_CODES and not current_urls:
+            streak = update_failure_streak(
+                sitemap_failures.get(site.domain),
+                today,
+                failure_code,
+            )
+            sitemap_failures[site.domain] = streak
+            consecutive_days = int(streak.get("consecutive_days") or 0)
+            log_warn(
+                f"{site.domain}: échec sitemap définitif HTTP {failure_code} "
+                f"({consecutive_days}/{DEFINITIVE_SITEMAP_DELETE_AFTER_DAYS} jour(s))"
+            )
+            if consecutive_days >= DEFINITIVE_SITEMAP_DELETE_AFTER_DAYS:
+                log_warn(
+                    f"{site.domain}: suppression du catalogue et purge des données "
+                    f"après {consecutive_days} jour(s) d'échec HTTP {failure_code}"
+                )
+                add_to_blacklist(
+                    base_dir,
+                    site,
+                    reason=f"definitive_sitemap_http_{failure_code}_{consecutive_days}d",
+                    new_urls_count=0,
+                )
+                remove_site_from_catalog(base_dir, site.domain)
+                prune_site_state(base_dir, site)
+                purge_site_events(base_dir, site.domain)
+                clear_failure_state(sitemap_failures, site.domain)
+            continue
+
+        clear_failure_state(sitemap_failures, site.domain)
         if not crawl_complete:
             log_warn(f"Crawl sitemap incomplet pour {site.domain}, snapshot conservé.")
             continue
@@ -817,6 +961,7 @@ def process() -> int:
             )
             remove_site_from_catalog(base_dir, site.domain)
             prune_site_state(base_dir, site)
+            purge_site_events(base_dir, site.domain)
             continue
 
         log_info(f"{site.domain}: {len(new_urls)} nouvelle(s) URL(s)")
@@ -824,6 +969,7 @@ def process() -> int:
             pending_urls.append((site, url))
 
     if not pending_urls:
+        save_sitemap_failures(base_dir, sitemap_failures)
         log_info("Aucune nouvelle URL à enrichir.")
         return 0
 
@@ -844,14 +990,12 @@ def process() -> int:
             if completed % PROGRESS_EVERY == 0 or completed == total:
                 log_info(f"Pages téléchargées: {completed}/{total}")
 
-    log_info(f"Initialisation KeyBERT ({KEYBERT_MODEL})")
-    extractor = KeyBERT(model=KEYBERT_MODEL)
     page_events: list[PageEvent] = []
     link_events: list[LinkEvent] = []
 
     for site, url in pending_urls:
         html, title = title_results.get(url, ("", ""))
-        keyword = extract_keyword_from_title(extractor, title) if title else ""
+        keyword = ""
         outgoing_links = extract_main_content_links(html, url, site.domain) if html else []
         unique_targets = {link.target_domain for link in outgoing_links}
 
@@ -885,6 +1029,7 @@ def process() -> int:
 
     append_jsonl_gz(page_events_path(base_dir, today), (asdict(event) for event in page_events))
     append_jsonl_gz(link_events_path(base_dir, today), (asdict(event) for event in link_events))
+    save_sitemap_failures(base_dir, sitemap_failures)
     log_info(
         f"{len(page_events)} page event(s) et {len(link_events)} link event(s) écrits pour {today}"
     )
