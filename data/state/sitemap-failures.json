@@ -1,134 +1,50 @@
 {
-  "ats-ffa.org": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "lavanguardiadelsur.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "archibien.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "marketing-strategique.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "mzonestudio.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "square-annuaire.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "leadrevolution.org": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "lesjardinsdambroisie.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "ultimatefs.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "le-codepostal.com": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "immobilier-coteaux.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "ptit-annuaire.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "spinellibois.fr": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "fiscalite-sci.com": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "isolationpro-annecy74.com": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "wilsonimmobilier.com": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
-  "immobilier44.net": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-06-06",
-    "last_seen": "2026-06-11"
-  },
   "wikio.fr": {
     "failure_code": 403,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-06-08",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-12"
   },
   "anousparis.fr": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-06-08",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-12"
   },
   "lejsd.com": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-09",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-12"
   },
   "the-bodyguard.fr": {
     "failure_code": 404,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-06-10",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-12"
   },
   "123-immo.com": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-06-11",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-12"
+  },
+  "cbl-ly.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-12",
+    "last_seen": "2026-06-12"
+  },
+  "cabinet-i-immobilier.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-12",
+    "last_seen": "2026-06-12"
+  },
+  "ceth.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-12",
+    "last_seen": "2026-06-12"
   }
 }
