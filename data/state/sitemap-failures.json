@@ -1,44 +1,26 @@
 {
   "crdp-limousin.fr": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-06-13",
-    "last_seen": "2026-06-16"
+    "last_seen": "2026-06-17"
   },
   "anousparis.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-14",
-    "last_seen": "2026-06-16"
+    "last_seen": "2026-06-17"
   },
   "koliving.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-14",
-    "last_seen": "2026-06-16"
+    "last_seen": "2026-06-17"
   },
   "ceth.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-14",
-    "last_seen": "2026-06-16"
-  },
-  "50bestsites.info": {
-    "failure_code": 403,
-    "consecutive_days": 1,
-    "first_seen": "2026-06-16",
-    "last_seen": "2026-06-16"
-  },
-  "letee.fr": {
-    "failure_code": 403,
-    "consecutive_days": 1,
-    "first_seen": "2026-06-16",
-    "last_seen": "2026-06-16"
-  },
-  "ottanta.fr": {
-    "failure_code": 403,
-    "consecutive_days": 1,
-    "first_seen": "2026-06-16",
-    "last_seen": "2026-06-16"
+    "last_seen": "2026-06-17"
   }
 }
