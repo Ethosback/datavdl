@@ -1,26 +1,332 @@
 {
   "crdp-limousin.fr": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-06-13",
-    "last_seen": "2026-06-17"
-  },
-  "anousparis.fr": {
-    "failure_code": 404,
-    "consecutive_days": 4,
-    "first_seen": "2026-06-14",
-    "last_seen": "2026-06-17"
+    "last_seen": "2026-06-18"
   },
   "koliving.fr": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-06-14",
-    "last_seen": "2026-06-17"
+    "last_seen": "2026-06-18"
   },
-  "ceth.fr": {
+  "patrimoine-aixlesbains.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "favrat-ossature-bois.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "50bestsites.info": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "ep-immobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "fongecif-bourgogne.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "domeus-constructions.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "micado-france.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "avecfrancoishollande.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "maisondesressources.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "letee.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "valdille.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "atypictures.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "neonet7-immobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "laforet-nanterre.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "messlive.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "macetilegrout.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "impots-loi-bouvard.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "location-appartement-taghazout.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investissement-locatif.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "ottanta.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "austudio.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "ophlm32.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "immeublimmo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investissementimmobilier.xyz": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "petition-pes.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investissement-immobilier.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "avtr.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "defiscenligne.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "colocation-investissement.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "reussir-immobilier.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "topsitesweb.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "ipatrimonium.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "nlest-hlm.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "annufinance.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investissement-colocation.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "abc-finances.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "assurancevie-conseils.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "victoria-patrimoine.biz": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "coligny-hlm.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "rentier-immobilier.info": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "defiscalisation-fcpi.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investissement-immobilier-locatif.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "conseilsimmobilier.ch": {
     "failure_code": 404,
-    "consecutive_days": 4,
-    "first_seen": "2026-06-14",
-    "last_seen": "2026-06-17"
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "habiter-au-quotidien.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "autonomiepetitapetit.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "berlaimont-immobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "comment-devenir-rentier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "courtier-credit-paris.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "investir-colocation.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "comment-devenir-rentier.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "defisc-info.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "hotel-beausite.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
+  },
+  "parigissimo.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18"
   }
 }
