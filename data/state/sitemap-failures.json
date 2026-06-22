@@ -1,26 +1,26 @@
 {
   "conseilsimmobilier.ch": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-06-18",
-    "last_seen": "2026-06-21"
+    "last_seen": "2026-06-22"
   },
   "anousparis.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-19",
-    "last_seen": "2026-06-21"
+    "last_seen": "2026-06-22"
   },
   "ceth.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-06-19",
-    "last_seen": "2026-06-21"
+    "last_seen": "2026-06-22"
   },
   "l-echo.info": {
     "failure_code": 403,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-06-20",
-    "last_seen": "2026-06-21"
+    "last_seen": "2026-06-22"
   }
 }
