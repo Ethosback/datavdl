@@ -1,8 +1,452 @@
 {
   "lepole.org": {
     "failure_code": 403,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26"
+    "last_seen": "2026-06-27"
+  },
+  "nostrodomus.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "cyfernet.org": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "webady.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "akbusiness.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "alaportebleue.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "patrimoine-aixlesbains.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "favrat-ossature-bois.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "oocto.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "lgpimmo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "fongecif-bourgogne.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "domeus-constructions.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "acamedia.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "domegos.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "micado-france.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "aginius.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "grasse-historique.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "avecfrancoishollande.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "diffusimmo.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "valdille.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "patronys.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "claritygo-impact.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "laforet-nanterre.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "agencegardon.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "lebureaudelimmo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "decoparty.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "teuco.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "cse-infos.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "macetilegrout.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "impots-loi-bouvard.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "immo-conseil.org": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "saintouen-lesdocks.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investissement-locatif.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "appartement-geneve.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "ophlm32.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "immeublimmo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investissementimmobilier.xyz": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "petition-pes.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investissement-immobilier.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "avtr.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "monimmoneuf.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "chahutbahut.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "outilsmachines.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "defiscenligne.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "colocation-investissement.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "reussir-immobilier.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "topsitesweb.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "ipatrimonium.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "nlest-hlm.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "annufinance.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investissement-colocation.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "abc-finances.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "bourseo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "ecobuilding-performance.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "assurancevie-conseils.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "victoria-patrimoine.biz": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "labecedairedupatrimoine.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "lepetitmacon.ca": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "pret-credit-immobilier.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "coligny-hlm.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "actif-immobilier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "rentier-immobilier.info": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "defiscalisation-fcpi.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investissement-immobilier-locatif.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "habiter-au-quotidien.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "autonomiepetitapetit.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "wallou-immobilier.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "berlaimont-immobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "comment-devenir-rentier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "courtier-credit-paris.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "investir-colocation.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "comment-devenir-rentier.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "defisc-info.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "coup-de-pouce-financier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
+  },
+  "blog-batiment.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-06-27",
+    "last_seen": "2026-06-27"
   }
 }
