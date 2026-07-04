@@ -1,26 +1,32 @@
 {
   "synthese-immobilier.com": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-06-29",
-    "last_seen": "2026-07-03"
+    "last_seen": "2026-07-04"
   },
   "habitatvert.fr": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-03"
+    "last_seen": "2026-07-04"
   },
   "habitatbricolage.fr": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-03"
+    "last_seen": "2026-07-04"
   },
   "reside-immobilier.fr": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-03"
+    "last_seen": "2026-07-04"
+  },
+  "cbl-ly.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-04",
+    "last_seen": "2026-07-04"
   }
 }
