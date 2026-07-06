@@ -1,26 +1,26 @@
 {
   "habitatvert.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-05"
+    "last_seen": "2026-07-06"
   },
   "habitatbricolage.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-05"
+    "last_seen": "2026-07-06"
   },
   "reside-immobilier.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-07-03",
-    "last_seen": "2026-07-05"
+    "last_seen": "2026-07-06"
   },
-  "maisondesressources.com": {
+  "cbl-ly.com": {
     "failure_code": 403,
     "consecutive_days": 1,
-    "first_seen": "2026-07-05",
-    "last_seen": "2026-07-05"
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06"
   }
 }
