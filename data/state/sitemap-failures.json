@@ -1,1 +1,788 @@
-{}
+{
+  "cyfernet.org": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "webady.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "akbusiness.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "alaportebleue.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "infos-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "rendement-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "mon-credit-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "tendances-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "mon-achat-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "la-location-immo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "malocationimmo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "oocto.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "acamedia.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "domegos.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "aginius.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-rapide.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "grasse-historique.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-de-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-colombes.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-professionnel.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "diffusimmo.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-66.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "patronys.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-specialiste-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-pose-zinc.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-demoussage.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-isolation-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-nouvelleaquitaine.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-renovation-maison.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-reparation-fuite.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-fiable.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-entreprise.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-hautsdefrance.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-remplacement-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-service-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-maison.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux-renovation.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-asnieres.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-bourgogne-franche-comte.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-diagnostic-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-fuite.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-installation-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-isolation-combles.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-maintenance-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-pose-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-professionnel.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-zinc.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-solide.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-est.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-bacacier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-brive.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-centre-val-de-loire.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-epinal.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-expert-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-france-entier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-maison.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-nettoyage-toit.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-pose-tuiles.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-qualifie.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-renovation-complete.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-expert.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-tuiles.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-zinc-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-laval.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-saintetienne.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-terrasse.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-alencon.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-entretien-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-auvergne-rhone-alpes.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-auvergnerhoalpes.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-batiment-ancien.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-batiment.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-cherbourg.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-demoussage-toit.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-etancheite-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-fiable.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-garantie.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-immeuble.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-maison-individuelle.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-menton.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-nouvelle-aquitaine.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-pose-bacacier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-professionnel-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-provence-alpes-cote-azur.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-renovation-classique.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-renovation-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-reparation-toit.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-saintbrieuc.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-saintdenis.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-saintmalo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-saintnazaire.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-sens.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-sud-est.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-durable.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-etancheite.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-service.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux-batiment.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux-france.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux-maison.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-travaux-toiture.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-tuiles-ardoises.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-zinc.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-ardoise.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-plate.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-solide.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-grandest.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-isolation.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-ouest.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-artisan.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-pamiers.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-bacacier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "couvreur-toiture-tuiles.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "claritygo-impact.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "agencegardon.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "lebureaudelimmo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "decoparty.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "teuco.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "cse-infos.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "immo-conseil.org": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "appartement-geneve.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "monimmoneuf.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "chahutbahut.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "outilsmachines.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "bourseo.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "ecobuilding-performance.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "pret-credit-immobilier.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "actif-immobilier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "wallou-immobilier.com": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  },
+  "coup-de-pouce-financier.fr": {
+    "failure_code": 415,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17"
+  }
+}
