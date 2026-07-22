@@ -1,14 +1,26 @@
 {
-  "allianz-entrepros.fr": {
-    "failure_code": 404,
+  "cbl-ly.com": {
+    "failure_code": 403,
     "consecutive_days": 1,
-    "first_seen": "2026-07-21",
-    "last_seen": "2026-07-21"
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22"
   },
-  "cabinet-i-immobilier.fr": {
+  "maisoncommunicante.com": {
     "failure_code": 404,
     "consecutive_days": 1,
-    "first_seen": "2026-07-21",
-    "last_seen": "2026-07-21"
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22"
+  },
+  "flin.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22"
+  },
+  "enalsa.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22"
   }
 }
