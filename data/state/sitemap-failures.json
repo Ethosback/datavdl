@@ -1,26 +1,32 @@
 {
   "vendomeimmobilier.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-11"
+    "last_seen": "2026-08-12"
   },
   "diagimmo-malin.fr": {
     "failure_code": 403,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-11"
+    "last_seen": "2026-08-12"
   },
   "luxuryloft.fr": {
     "failure_code": 403,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-11"
+    "last_seen": "2026-08-12"
   },
   "viveco.fr": {
     "failure_code": 403,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-11"
+    "last_seen": "2026-08-12"
+  },
+  "belaircamp.org": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-08-12",
+    "last_seen": "2026-08-12"
   }
 }
