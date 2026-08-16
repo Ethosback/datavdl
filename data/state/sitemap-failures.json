@@ -1,14 +1,26 @@
 {
   "belaircamp.org": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-15"
+    "last_seen": "2026-08-16"
   },
   "worldofstargate.fr": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-15"
+    "last_seen": "2026-08-16"
+  },
+  "letee.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16"
+  },
+  "ottanta.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16"
   }
 }
