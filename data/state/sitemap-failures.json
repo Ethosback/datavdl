@@ -1,20 +1,380 @@
 {
-  "immeuble-de-rapport-a-vendre.com": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-09-01",
-    "last_seen": "2026-09-06"
-  },
   "lestutosdelimmo.fr": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-06"
+    "last_seen": "2026-09-07"
   },
-  "keur-immo.com": {
+  "usineadesign.com": {
     "failure_code": 403,
-    "consecutive_days": 3,
-    "first_seen": "2026-09-04",
-    "last_seen": "2026-09-06"
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "aidologement.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "archilibre.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "habitatparticipatif.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "patrimoine-rhonalpin.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "vintagepeople.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "bambinsdeco.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "aebfrance.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "mag-investir.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "cap-btp.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "irismagazine.org": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "batirecologique.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "metiersdart-artisanat.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "ungms.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "jeanmichelplace.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "patricia4realestate.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "compostage-au-jardin.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "maison-direct.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "cosy-tendance.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "jardipedia.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "maisonboomboom.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "maisonethier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "le-banc-moussu.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "ekobo.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "actu-architecture.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "ludovic-simon.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "electromust.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "leportaildesantiquaires.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "burov.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "sweetdeco66.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "timetodiy.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "frci-idf.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "immobilier-realiste.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "actu-immobilier.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "deco-enfant.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "jardinot.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "loi-madelin.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "obdesigner.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "uah-paris.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "bobart-store.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "jsp-industries.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "maison-aimable.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "macite.net": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "e-parquets.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "boxadomicile.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "made75.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "citadimmo.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "cambounes.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "carredarc.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "france-residence.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "mon-viager.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "xetic.org": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "immoeurofinance.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "infocreditimmobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "valromeyretord.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "cosmoligne.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "obi-investissements.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "leauda.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "thumal.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "chronique-immobilier.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "focus-location.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
+  },
+  "christelle-velut.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07"
   }
 }
