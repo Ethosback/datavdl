@@ -1,8 +1,14 @@
 {
   "cafesauvage.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
+  },
+  "irismagazine.org": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14"
   }
 }
