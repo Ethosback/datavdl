@@ -1,20 +1,32 @@
 {
   "actu-instantanee.com": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-09-24",
-    "last_seen": "2026-09-27"
+    "last_seen": "2026-09-28"
   },
   "akbusiness.fr": {
     "failure_code": 403,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-09-26",
-    "last_seen": "2026-09-27"
+    "last_seen": "2026-09-28"
   },
   "habitatparticipatif.net": {
     "failure_code": 404,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-09-26",
-    "last_seen": "2026-09-27"
+    "last_seen": "2026-09-28"
+  },
+  "cbl-ly.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28"
+  },
+  "bingo-logis.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28"
   }
 }
