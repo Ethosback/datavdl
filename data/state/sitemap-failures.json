@@ -1,8 +1,14 @@
 {
   "nemovitosti-inzerce.cz": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02"
+    "last_seen": "2026-10-03"
+  },
+  "leauda.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-03",
+    "last_seen": "2026-10-03"
   }
 }
