@@ -1,20 +1,26 @@
 {
   "nemovitosti-inzerce.cz": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-10-02",
-    "last_seen": "2026-10-04"
+    "last_seen": "2026-10-05"
   },
   "leauda.fr": {
     "failure_code": 403,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-10-03",
-    "last_seen": "2026-10-04"
+    "last_seen": "2026-10-05"
   },
   "immo-franchise.info": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-10-04",
-    "last_seen": "2026-10-04"
+    "last_seen": "2026-10-05"
+  },
+  "hebertimmobilier.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05"
   }
 }
