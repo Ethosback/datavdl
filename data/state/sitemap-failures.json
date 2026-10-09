@@ -1,32 +1,32 @@
 {
-  "leauda.fr": {
-    "failure_code": 403,
-    "consecutive_days": 6,
-    "first_seen": "2026-10-03",
-    "last_seen": "2026-10-08"
-  },
   "immo-franchise.info": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-10-04",
-    "last_seen": "2026-10-08"
+    "last_seen": "2026-10-09"
   },
   "hebertimmobilier.fr": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-08"
+    "last_seen": "2026-10-09"
   },
   "sp-batiment.com": {
     "failure_code": 403,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-08"
+    "last_seen": "2026-10-09"
   },
   "immopalais.fr": {
     "failure_code": 404,
-    "consecutive_days": 2,
+    "consecutive_days": 3,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-08"
+    "last_seen": "2026-10-09"
+  },
+  "cbl-ly.com": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09"
   }
 }
