@@ -1,32 +1,20 @@
 {
-  "immo-franchise.info": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-10-04",
-    "last_seen": "2026-10-09"
-  },
   "hebertimmobilier.fr": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-09"
+    "last_seen": "2026-10-10"
   },
   "sp-batiment.com": {
     "failure_code": 403,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-09"
+    "last_seen": "2026-10-10"
   },
   "immopalais.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-09"
-  },
-  "cbl-ly.com": {
-    "failure_code": 403,
-    "consecutive_days": 1,
-    "first_seen": "2026-10-09",
-    "last_seen": "2026-10-09"
+    "last_seen": "2026-10-10"
   }
 }
