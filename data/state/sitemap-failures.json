@@ -1,20 +1,14 @@
 {
-  "hebertimmobilier.fr": {
-    "failure_code": 404,
-    "consecutive_days": 6,
-    "first_seen": "2026-10-05",
-    "last_seen": "2026-10-10"
-  },
   "sp-batiment.com": {
     "failure_code": 403,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-10"
+    "last_seen": "2026-10-11"
   },
   "immopalais.fr": {
     "failure_code": 404,
-    "consecutive_days": 4,
+    "consecutive_days": 5,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-10"
+    "last_seen": "2026-10-11"
   }
 }
