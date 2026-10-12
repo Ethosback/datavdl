@@ -1,14 +1,104 @@
 {
   "sp-batiment.com": {
     "failure_code": 403,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-11"
+    "last_seen": "2026-10-12"
   },
   "immopalais.fr": {
     "failure_code": 404,
-    "consecutive_days": 5,
+    "consecutive_days": 6,
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-11"
+    "last_seen": "2026-10-12"
+  },
+  "ludovic-simon.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "sweetdeco66.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "freecourtage.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "deco-enfant.org": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "jsp-industries.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "e-parquets.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "cambounes.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "france-residence.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "xetic.org": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "immoeurofinance.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "valromeyretord.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "cosmoligne.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "thumal.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "chronique-immobilier.com": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
+  },
+  "focus-location.fr": {
+    "failure_code": 404,
+    "consecutive_days": 1,
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12"
   }
 }
