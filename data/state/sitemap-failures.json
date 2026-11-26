@@ -1,26 +1,38 @@
 {
   "diagnosticoo.com": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-11-23",
-    "last_seen": "2026-11-25"
+    "last_seen": "2026-11-26"
   },
   "formation-conciergerie.fr": {
     "failure_code": 404,
-    "consecutive_days": 3,
+    "consecutive_days": 4,
     "first_seen": "2026-11-23",
-    "last_seen": "2026-11-25"
+    "last_seen": "2026-11-26"
   },
   "matexpo.fr": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-11-25",
-    "last_seen": "2026-11-25"
+    "last_seen": "2026-11-26"
   },
   "investissementlocatif.biz": {
     "failure_code": 404,
-    "consecutive_days": 1,
+    "consecutive_days": 2,
     "first_seen": "2026-11-25",
-    "last_seen": "2026-11-25"
+    "last_seen": "2026-11-26"
+  },
+  "lefabricantdescarpates.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26"
+  },
+  "operation-renovee.fr": {
+    "failure_code": 403,
+    "consecutive_days": 1,
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26"
   }
 }
